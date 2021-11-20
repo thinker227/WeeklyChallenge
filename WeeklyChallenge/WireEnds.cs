@@ -28,35 +28,27 @@ public static class WireEnds {
 			_ => Direction.None
 		};
 
-	private static T[] SmoothArray<T>(T[] source, int size, T item) {
-		if (source.Length == size) return source;
-
-		T[] array = new T[size];
-		Array.Fill(array, item);
-		source.CopyTo(array, 0);
-		return array;
-	}
-
 	public static int CountWireEnds(string s) {
 		var grid = s
 			.Split('\n')
 			.Select(s => s.Select(GetDirection).ToArray())
 			.ToArray();
 		int height = grid.Length;
-		int width = grid.Max(r => r.Length);
-		grid = grid		// Resize rows to be the same width to prevent jagged arrays
-			.Select(r => SmoothArray(r, width, Direction.None))
-			.ToArray();
 
 		int loose = 0;
 		for (int y = 0; y < height; y++) {
 			var row = grid[y];
+			int width = row.Length;
 			for (int x = 0; x < width; x++) {
 				Direction current = row[x];
-				Direction left = x == 0 ? Direction.None : row[x - 1];
-				Direction right = x == width - 1 ? Direction.None : row[x + 1];
-				Direction up = y == 0 ? Direction.None : grid[y - 1][x];
-				Direction down = y == height - 1 ? Direction.None : grid[y + 1][x];
+				Direction left = x == 0 ?
+					Direction.None : row[x - 1];
+				Direction right = x == width - 1 ?
+					Direction.None : row[x + 1];
+				Direction up = y == 0 || x >= grid[y - 1].Length ?
+					Direction.None : grid[y - 1][x];
+				Direction down = y == height - 1 || x >= grid[y + 1].Length ?
+					Direction.None : grid[y + 1][x];
 
 				if (current.HasFlag(Direction.Up) && !up.HasFlag(Direction.Down)) loose++;
 				if (current.HasFlag(Direction.Down) && !down.HasFlag(Direction.Up)) loose++;
