@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeklyChallenge", "WeeklyChallenge\WeeklyChallenge.csproj", "{1C143010-60E7-4ED9-8214-DFCB4B95F03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeeklyChallenge.Tests", "WeeklyChallenge.Tests\WeeklyChallenge.Tests.csproj", "{8FC8D358-ADB5-49DB-8453-8A249B905245}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C143010-60E7-4ED9-8214-DFCB4B95F03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C143010-60E7-4ED9-8214-DFCB4B95F03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C143010-60E7-4ED9-8214-DFCB4B95F03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C143010-60E7-4ED9-8214-DFCB4B95F03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC8D358-ADB5-49DB-8453-8A249B905245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC8D358-ADB5-49DB-8453-8A249B905245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC8D358-ADB5-49DB-8453-8A249B905245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC8D358-ADB5-49DB-8453-8A249B905245}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {635D4AB9-E4D0-4DFB-BCE9-7CC95E2730B2}
+	EndGlobalSection
+EndGlobal
